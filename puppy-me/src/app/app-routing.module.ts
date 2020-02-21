@@ -9,11 +9,12 @@ import { PhotosComponent } from './folder/photos/photos.component';
 
 
 const routes: Routes = [
-  {path: 'main', component: MainComponent},
+  {path: '', component: MainComponent, redirectTo: '', pathMatch: 'full'},
   {path: 'about', component: AboutComponent},
   {path: 'menu', component: MenuComponent},
   {path: 'catering', component: CateringComponent},
-  {path: 'photos', component: PhotosComponent}
+  {path: 'photos', component: PhotosComponent},
+  {path: '**', redirectTo: ''}
 ];
 
 @NgModule({
